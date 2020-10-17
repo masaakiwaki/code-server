@@ -1,0 +1,11 @@
+version: "3"
+services:
+  notebook:
+    image: codercom/code-server
+    ports:
+      - "8080:8080"
+    environment:
+      - PASSWORD="setup"
+    volumes:
+      - /mnt/d/work:/work
+    command: --auth none
